@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Репетитор английского — Ваш путеводитель в язык</title>
+  <meta name="description" content="Яркий и веселый сайт-визитка репетитора английского языка. Уроки для детей, подростков и взрослых. Онлайн и оффлайн. Гибкий график и индивидуальный подход." />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #FFDEE9; /* pink */
+      --bg2: #B5FFFC; /* mint */
+      --accent1: #FF6B6B;
+      --accent2: #FFD93D;
+      --card: rgba(255,255,255,0.85);
+      --glass: rgba(255,255,255,0.12);
+      --text: #1b2330;
+      --muted: #4b5563;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:var(--text);
+      background: linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header / Hero */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:900;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--text);font-weight:700}
+    nav a.cta{background:linear-gradient(90deg,var(--accent1),#FF8E53);color:white}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+    .hero h1{font-size:36px;margin:0 0 8px}
+    .hero p.lead{margin:0 0 18px;color:var(--muted);font-weight:600}
+    .actions{display:flex;gap:12px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800}
+    .btn.primary{background:linear-gradient(90deg,var(--accent1),#ff7aa2);color:white}
+    .btn.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06)}
+
+    .card-photo{background:var(--card);border-radius:16px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+    .photo{width:100%;height:340px;border-radius:10px;background:linear-gradient(180deg,#fff, #f3f3f3);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+    .photo small{display:block;font-size:12px;color:var(--muted);margin-top:8px}
+    .photo img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+
+    /* Sections */
+    section{margin-top:34px}
+    .grid{display:grid;gap:16px}
+    .services{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+    .service{background:var(--glass);padding:18px;border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 6px 20px rgba(59,130,246,0.06)}
+    .service h3{margin:0 0 8px}
+
+    .prices{display:flex;gap:16px;flex-wrap:wrap}
+    .price{flex:1;min-width:220px;background:var(--card);padding:18px;border-radius:12px}
+    .price .amount{font-size:22px;font-weight:900}
+
+    .testimonials{display:flex;flex-direction:column;gap:12px}
+    .testi{background:var(--card);padding:12px;border-radius:10px}
+
+    footer{margin-top:36px;padding:18px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .photo{height:260px}
+    }
+
+    /* FAQ */
+    .faq-item{background:var(--card);padding:12px;border-radius:10px}
+    .faq-item summary{cursor:pointer;font-weight:700}
+
+    /* small visual flourishes */
+    .accent-pill{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:white;font-weight:800}
+
+    .contact-form{display:grid;gap:8px}
+    .contact-form input,.contact-form textarea{padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.08)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    @media (max-width:600px){.contact-grid{grid-template-columns:1fr}}
+
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">EN</div>
+        <div>
+          <div style="font-weight:900">English by Elena</div>
+          <div class="small">Индивидуальные уроки • Онлайн и оффлайн</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">О преподавателе</a>
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#testimonials">Отзывы</a>
+        <a class="cta" href="#contact">Записаться</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Яркие, занимательные и результативные уроки английского</h1>
+          <p class="lead">Помогаю детям, подросткам и взрослым заговорить уверенно: подготовка к экзаменам, школьная поддержка и разговорная практика.</p>
+          <div class="actions">
+            <a class="btn primary" href="#contact">Записаться на пробный урок</a>
+            <a class="btn ghost" href="#prices">Узнать цены</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <span class="accent-pill">Онлайн</span>
+            <span class="accent-pill">Индивидуально</span>
+            <span class="accent-pill">Групповые занятия</span>
+          </div>
+
+          <div style="margin-top:22px;font-size:14px;color:var(--muted)">
+            <strong>Примеры достижений:</strong>
+            <ul style="margin:8px 0 0 18px;padding:0;color:var(--muted)">
+              <li>Подготовка к GCSE / ЕГЭ / TOEFL</li>
+              <li>Уверенная устная речь за 3–4 месяца</li>
+              <li>Игровой формат для младших школьников</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="card-photo">
+          <!-- Инструкция: поместите сюда свою фотографию. Замените содержимое <div class="photo"> на <img src="yourphoto.jpg" alt="Elena — репетитор"> -->
+          <div class="photo" id="photoBox">
+            <div style="text-align:center;padding:8px">
+              <div style="font-size:18px;font-weight:800">ФОТО РЕПЕТИТОРА</div>
+              <div style="margin-top:8px;color:var(--muted)">Нажмите "Заменить фото" или вставьте свой URL</div>
+              <small>Рекомендованный размер: 1200×900px</small>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <input id="photoUrl" type="text" placeholder="URL фотографии" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+            <button class="btn" onclick="replacePhoto()">Заменить фото</button>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <h2>О преподавателе</h2>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+          <div style="flex:1;min-width:280px;background:var(--card);padding:16px;border-radius:12px">
+            <p><strong>Елена — сертифицированный преподаватель Английского языка</strong> с 8+ лет опыта, работающая с детьми и взрослыми. Учит говорить, понимать и успешно сдавать экзамены — при этом делает процесс лёгким и интересным.</p>
+            <ul style="margin:8px 0 0 18px;color:var(--muted)">
+              <li>Методы: Communicative approach, task-based learning, games</li>
+              <li>Формат: индивидуальные и мини-группы</li>
+              <li>Доступны: онлайн (Zoom/Teams) и оффлайн</li>
+            </ul>
+          </div>
+
+          <div style="width:320px;min-width:220px">
+            <div class="price">
+              <div style="font-size:14px;color:var(--muted)">Пробный урок</div>
+              <div class="amount">1 урок — 30 мин</div>
+              <div style="margin-top:8px;font-size:13px;color:var(--muted)">Специальное предложение для новых учеников</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Услуги</h2>
+        <div class="grid services">
+          <div class="service">
+            <h3>Английский для детей</h3>
+            <p class="small">Игровые занятия, карточки, песни, короткие диалоги — идеально для младших школьников.</p>
+          </div>
+          <div class="service">
+            <h3>Подготовка к экзаменам</h3>
+            <p class="small">ЕГЭ, IELTS, TOEFL: стратегия, практика заданий и тренировка речи.</p>
+          </div>
+          <div class="service">
+            <h3>Разговорный английский</h3>
+            <p class="small">Разговорные клубы и индивидуальные занятия для улучшения беглости.</p>
+          </div>
+          <div class="service">
+            <h3>Школьная поддержка</h3>
+            <p class="small">Помощь с домашними заданиями, контроль прогресса и подготовка к контрольным.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="prices">
+        <h2>Цены и форматы</h2>
+        <div class="prices">
+          <div class="price">
+            <div style="font-weight:800">Индивидуально — 60 мин</div>
+            <div class="amount">от 25€ / урок</div>
+            <div class="small">Скидки при покупке пакета занятий</div>
+          </div>
+          <div class="price">
+            <div style="font-weight:800">Группа (2–4 чел.) — 60 мин</div>
+            <div class="amount">от 15€ / чел.</div>
+            <div class="small">Развиваем разговорные навыки и экономим бюджет</div>
+          </div>
+          <div class="price">
+            <div style="font-weight:800">Онлайн мини-курс (4 урока)</div>
+            <div class="amount">от 80€</div>
+            <div class="small">Интенсивные темы: speaking, grammar, exam practice</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <h2>Отзывы</h2>
+        <div class="testimonials" id="testiWrap">
+          <div class="testi"><strong>Мария, мама школьника:</strong> «У ребёнка улучшились оценки и он стал увереннее говорить на уроках!»</div>
+          <div class="testi"><strong>Иван, студент:</strong> «Подготовка к TOEFL прошла гладко — результат превзошёл ожидания.»</div>
+          <div class="testi"><strong>Ольга, подросток:</strong> «Уроки Елены — весело, понятно и эффективно!»</div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>Вопросы и ответы</h2>
+        <div style="display:grid;gap:8px">
+          <details class="faq-item"><summary>Как проходит первый урок?</summary><div style="margin-top:8px;color:var(--muted)">Краткое знакомство, определение уровня и пробное занятие с целью постановки учебных целей.</div></details>
+          <details class="faq-item"><summary>Какие материалы нужны?</summary><div style="margin-top:8px;color:var(--muted)">Я предоставляю все учебные материалы — достаточно блокнота и улыбки :)</div></details>
+          <details class="faq-item"><summary>Можно ли переносить занятия?</summary><div style="margin-top:8px;color:var(--muted)">Да, при условии предупреждения за 24 часа.</div></details>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Записаться на пробный урок</h2>
+        <div style="display:grid;gap:12px">
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="contact-grid">
+              <input id="name" required placeholder="Имя" />
+              <input id="phone" placeholder="Телефон или мессенджер" />
+            </div>
+            <input id="email" type="email" placeholder="Email (опционально)" />
+            <textarea id="notes" rows="4" placeholder="Кратко: возраст, цель (школа/экзамен/разговорный)" ></textarea>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn primary" type="submit">Отправить заявку</button>
+              <div class="small">Или напишите: <strong>elena.tutor@example.com</strong></div>
+            </div>
+          </form>
+
+          <div style="margin-top:8px;color:var(--muted)">Телефон/WhatsApp: <strong>+372 512 3456</strong> • Расписание: гибкое, вечера и выходные</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> English by Elena — все права защищены • <a href="#contact">Записаться</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function replacePhoto(){
+      const url = document.getElementById('photoUrl').value.trim();
+      const box = document.getElementById('photoBox');
+      if(!url){
+        alert('Вставьте ссылку на изображение в поле слева.');
+        return;
+      }
+      box.innerHTML = '<img src="'+url+'" alt="Фотография репетитора">';
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const notes = document.getElementById('notes').value;
+      // Сюда можно повесить реальную отправку через сервер или почту
+      alert('Заявка отправлена. Спасибо, '+(name||'')+'!\nМы свяжемся с вами в ближайшее время.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
